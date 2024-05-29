@@ -47,7 +47,7 @@ body {
     text-align: center;
 
     h3 {
-      font-size: 44px;
+      font-size: 36px;
       font-weight: bold;
       color: white;
       margin-top: 20px;
@@ -60,8 +60,11 @@ body {
   img.loading {
     display: block;
     position: absolute;
-    top: -5% ;
-    right: -700px;
+    top:  -25vh;
+    right: 0;
+    height: 150vh;
+    margin-right: -120vh;
+    aspect-ratio: 1/1;
     animation-name: spin;
     animation-duration: 50000ms;
     animation-iteration-count: infinite;
@@ -79,15 +82,15 @@ body {
 
 
 .word-container {
-  min-width: 520px;
+  min-width: 380px;
 }
 
 h4 {
   min-height: 40px;
   color: var(--primary);
   width: fit-content;
-  font-size: 50px;
-  font-weight: 300;
+  font-size: 32px;
+  font-weight: bold;
   letter-spacing: 10px;
   text-transform: uppercase;
   position: relative;
@@ -125,7 +128,7 @@ h4 {
 
 #countdown span {
   display: block;
-  font-size: 2em;
+  font-size: 1.2em;
 
   &:first-of-type {
     font-weight: 500;
@@ -154,7 +157,7 @@ h4 {
   .header {
     transform: translateY(-200px);
     color: white;
-    font-size: 40px;
+    font-size: 25px;
     letter-spacing: 10px;
     opacity: 0;
     animation: main-title 2000ms 2900ms forwards ease-out;
