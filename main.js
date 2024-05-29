@@ -37,13 +37,7 @@ setTimeout(() => {
   // }, 250);
 
   // Set the date we're counting down to
-  const countDownDate =
-    new Date().getTime() +
-    2 * 24 * 60 * 60 * 1000 +
-    8 * 60 * 60 * 1000 +
-    25 * 60 * 1000 +
-    27 * 1000;
-
+  const countDownDate = new Date("2024-07-15T00:00:00").getTime();
   // Update the countdown every 1 second
   const countdownFunction = setInterval(function () {
     // Get today's date and time
