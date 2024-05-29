@@ -1,0 +1,225 @@
+:root {
+  --primary: #F0803C
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: url('/public/background.png') bottom;
+  background-size: cover;
+}
+
+
+#starting-screen {
+
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 120vh;
+  animation-name: starting-screen-up;
+  animation-delay: 1.7s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  .logo {
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    top: 120%;
+    transform: translate(-50%, -50%);
+    animation-name: logoup;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    text-align: center;
+
+    h3 {
+      font-size: 44px;
+      font-weight: bold;
+      color: white;
+      margin-top: 20px;
+      letter-spacing: 10px;
+    }
+  }
+}
+
+#app {
+  img.loading {
+    display: block;
+    position: absolute;
+    top: -5% ;
+    right: -700px;
+    animation-name: spin;
+    animation-duration: 50000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;     
+  }
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap:30px
+}
+
+
+
+.word-container {
+  min-width: 520px;
+}
+
+h4 {
+  min-height: 40px;
+  color: var(--primary);
+  width: fit-content;
+  font-size: 50px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  position: relative;
+  border-right: 3px solid var(--primary);
+  padding-right: 10px;
+  width: fit-content;
+
+  span {
+    display: inline-block;
+    transition: transform 70ms;
+  }
+}
+
+.rotated {
+
+  transform: rotateY(90deg);
+}
+
+#countdown {
+  margin-inline: auto;
+  width: fit-content;
+  display: flex;
+  gap: 20px;
+}
+
+#countdown div {
+  color: white;
+  text-align: center;
+
+  &:last-of-type span:last-of-type {
+    color: var(--primary);
+
+  }
+}
+
+#countdown span {
+  display: block;
+  font-size: 2em;
+
+  &:first-of-type {
+    font-weight: 500;
+  }
+
+  &:last-of-type {
+    font-size: 20px;
+  }
+}
+
+#countdown #seconds {
+  color: var(--primary);
+}
+
+
+.main-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  .logo {
+    transform: translateY(-200px);
+    animation: main-logo 2000ms 3000ms forwards ease-out ;
+    opacity: 0;
+  }
+  .header {
+    transform: translateY(-200px);
+    color: white;
+    font-size: 40px;
+    letter-spacing: 10px;
+    opacity: 0;
+    animation: main-title 2000ms 2900ms forwards ease-out;
+  }
+
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+@keyframes logoup {
+  0% {
+    top: 120%;
+  }
+
+  40% {
+    top: 50%;
+  }
+
+  70% {
+    top: 50%;
+  }
+
+  100% {
+    top: -20%
+  }
+
+}
+// 
+@keyframes starting-screen-up {
+  0% {
+    top: 0%;
+  }
+
+  100% {
+    top: -120%
+  }
+
+}
+
+@keyframes main-logo {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    
+  }
+}
+@keyframes main-title {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+}
