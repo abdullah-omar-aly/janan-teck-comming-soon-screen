@@ -9,39 +9,35 @@
 </head>
 
 <body>
-  <div id="app">
-    <img class="loading" src="/public/Loading.svg" />
-    <div id="starting-screen">
-      <div class="logo">
-        <img src="/public/jana-tech-logo.svg" width="160" />
-        <h3>JANAN TECH</h3>
-      </div>
+  <div class="starting-screen">
+    <div class="content">
+      <img src="/public/jana-tech-logo.svg" width="160" />
+      <h3>JANAN TECH</h3>
     </div>
-
-
-
-
-    <div class="hero">
-      <div class="main-view">
-        <img class="logo" src="/public/jana-tech-logo.svg" width="100" />
-        <h3 class="header">JANAN TECH</h3>
-      </div>
-      <div class="word-container">
-        <h4 id="word">
-        </h4>
-      </div>
-      <div id="countdown">
-        <div><span id="days">00</span><span>days</span></div>
-        <div><span id="hours">00</span><span>hours</span></div>
-        <div><span id="minutes">00</span><span>minutes</span></div>
-        <div><span id="seconds">00</span><span>seconds</span></div>
-      </div>
-    </div>
-
-
   </div>
+  </div>
+  <img class="wheel" src="/public/Loading.svg" />
+
+
+  
+  <main class="main">
+    <div class="content">
+      <img class="logo" src="/public/jana-tech-logo.svg" width="100" />
+      <h3 class="heading">JANAN TECH</h3>
+    </div>
+    <div class="word-container">
+      <h4 id="word"></h4>
+    </div>
+    <div id="countdown">
+      <div><span id="days">00</span><span>days</span></div>
+      <div><span id="hours">00</span><span>hours</span></div>
+      <div><span id="minutes">00</span><span>minutes</span></div>
+      <div><span id="seconds">00</span><span>seconds</span></div>
+    </div>
+  </main>
 
   <script type="module" src="/main.js"></script>
+
 </body>
 
 </html>
